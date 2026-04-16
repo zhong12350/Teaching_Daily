@@ -36,6 +36,13 @@ body {
   line-height: 1.7;
 }
 
+.svg-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -119,7 +126,6 @@ img {
 .archive-title-row,
 .future-grid,
 .feature-grid,
-.highlight-grid,
 .board-grid,
 .profile-layout,
 .hero-metrics {
@@ -185,7 +191,6 @@ img {
 .button:hover,
 .card-link:hover,
 .board-card:hover,
-.highlight-card:hover,
 .feature-card:hover {
   transform: translateY(-3px);
 }
@@ -356,18 +361,13 @@ img {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.feature-card,
-.highlight-card {
+.feature-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .feature-index {
   display: inline-block;
   font-weight: 700;
-}
-
-.highlight-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .board-grid {
@@ -380,11 +380,12 @@ img {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.board-card img {
+.board-card .board-thumb {
+  display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
-  background: #0e2038;
+  background: #e8eef8;
 }
 
 .board-card-body {
@@ -508,7 +509,6 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .highlight-grid,
   .board-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -521,7 +521,6 @@ img {
   .two-column,
   .future-grid,
   .feature-grid,
-  .highlight-grid,
   .board-grid,
   .profile-layout,
   .archive-title-row,

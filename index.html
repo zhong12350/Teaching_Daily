@@ -11,6 +11,86 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <!-- Inline SVG sprites: avoids broken external paths on GitHub Pages; gradient IDs are unique per symbol. -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="symBoardA" viewBox="0 0 800 600">
+      <defs>
+        <linearGradient id="thumbGradA" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#10243A"/>
+          <stop offset="1" stop-color="#0A1726"/>
+        </linearGradient>
+      </defs>
+      <rect width="800" height="600" rx="40" fill="#0D1B2A"/>
+      <rect x="24" y="24" width="752" height="552" rx="28" fill="url(#thumbGradA)"/>
+      <rect x="70" y="86" width="660" height="428" rx="24" fill="#17324A" stroke="#355B7A" stroke-width="4"/>
+      <text x="102" y="146" fill="#B6E3FF" font-size="34" font-family="Arial, sans-serif" font-weight="700">Teaching Daily</text>
+      <text x="102" y="188" fill="#E9F7FF" font-size="24" font-family="Arial, sans-serif">Functions &amp; Derivatives</text>
+      <path d="M112 250H336" stroke="#F3FBFF" stroke-width="8" stroke-linecap="round"/>
+      <path d="M112 292H520" stroke="#9FD3FF" stroke-width="6" stroke-linecap="round"/>
+      <path d="M112 334H472" stroke="#F3FBFF" stroke-width="6" stroke-linecap="round"/>
+      <path d="M112 390C178 330 240 312 298 332C350 350 402 404 468 418" stroke="#F8C66A" stroke-width="7" stroke-linecap="round"/>
+      <path d="M504 250H676" stroke="#A4F0C5" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="616" cy="404" r="74" stroke="#B6E3FF" stroke-width="6"/>
+      <text x="102" y="474" fill="#9FD3FF" font-size="22" font-family="Arial, sans-serif">Board preview</text>
+    </symbol>
+    <symbol id="symBoardB" viewBox="0 0 800 600">
+      <defs>
+        <linearGradient id="thumbGradB" x1="58" y1="28" x2="730" y2="572" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#0E2135"/>
+          <stop offset="1" stop-color="#081320"/>
+        </linearGradient>
+      </defs>
+      <rect width="800" height="600" rx="40" fill="#0C1726"/>
+      <rect x="28" y="28" width="744" height="544" rx="30" fill="url(#thumbGradB)"/>
+      <rect x="72" y="84" width="656" height="432" rx="24" fill="#102B43" stroke="#4B7395" stroke-width="4"/>
+      <text x="106" y="146" fill="#9CD2FF" font-size="34" font-family="Arial, sans-serif" font-weight="700">Grade 12 Math</text>
+      <text x="106" y="188" fill="#EEF8FF" font-size="24" font-family="Arial, sans-serif">Analytic geometry</text>
+      <path d="M112 246H252" stroke="#F7FCFF" stroke-width="8" stroke-linecap="round"/>
+      <path d="M272 246H412" stroke="#F7FCFF" stroke-width="8" stroke-linecap="round"/>
+      <path d="M112 290H428" stroke="#A3E9BF" stroke-width="6" stroke-linecap="round"/>
+      <path d="M530 242L530 430" stroke="#F7FCFF" stroke-width="5"/>
+      <path d="M530 430H690" stroke="#F7FCFF" stroke-width="5"/>
+      <circle cx="616" cy="336" r="74" stroke="#9CD2FF" stroke-width="6" stroke-dasharray="10 10"/>
+      <text x="106" y="472" fill="#9CD2FF" font-size="22" font-family="Arial, sans-serif">Lecture snapshot</text>
+    </symbol>
+    <symbol id="symBoardC" viewBox="0 0 800 600">
+      <defs>
+        <linearGradient id="thumbGradC" x1="24" y1="24" x2="776" y2="576" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#0F2235"/>
+          <stop offset="1" stop-color="#08111D"/>
+        </linearGradient>
+      </defs>
+      <rect width="800" height="600" rx="40" fill="#091423"/>
+      <rect x="24" y="24" width="752" height="552" rx="30" fill="url(#thumbGradC)"/>
+      <rect x="70" y="84" width="660" height="432" rx="24" fill="#11263A" stroke="#3E698F" stroke-width="4"/>
+      <text x="104" y="144" fill="#B7E2FF" font-size="34" font-family="Arial, sans-serif" font-weight="700">Systematic review</text>
+      <text x="104" y="186" fill="#F0F9FF" font-size="24" font-family="Arial, sans-serif">Sequences &amp; inequalities</text>
+      <path d="M112 246H410" stroke="#F1FAFF" stroke-width="8" stroke-linecap="round"/>
+      <path d="M112 286H450" stroke="#A0D4FF" stroke-width="6" stroke-linecap="round"/>
+      <path d="M112 326H374" stroke="#F1FAFF" stroke-width="6" stroke-linecap="round"/>
+      <rect x="526" y="236" width="144" height="138" rx="18" stroke="#A0D4FF" stroke-width="6"/>
+      <text x="104" y="472" fill="#9FD3FF" font-size="22" font-family="Arial, sans-serif">Board archive</text>
+    </symbol>
+    <symbol id="symBoardD" viewBox="0 0 800 600">
+      <defs>
+        <linearGradient id="thumbGradD" x1="24" y1="24" x2="776" y2="576" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#10263A"/>
+          <stop offset="1" stop-color="#08131F"/>
+        </linearGradient>
+      </defs>
+      <rect width="800" height="600" rx="40" fill="#091524"/>
+      <rect x="24" y="24" width="752" height="552" rx="30" fill="url(#thumbGradD)"/>
+      <rect x="70" y="84" width="660" height="432" rx="24" fill="#0F2940" stroke="#40698D" stroke-width="4"/>
+      <text x="104" y="146" fill="#A6DAFF" font-size="34" font-family="Arial, sans-serif" font-weight="700">Exam-oriented</text>
+      <text x="104" y="188" fill="#F3FBFF" font-size="24" font-family="Arial, sans-serif">Solid geometry</text>
+      <path d="M116 244H308" stroke="#F3FBFF" stroke-width="8" stroke-linecap="round"/>
+      <path d="M116 286H456" stroke="#9FD3FF" stroke-width="6" stroke-linecap="round"/>
+      <path d="M518 250L604 212L690 260L612 306L518 250Z" stroke="#F4C46A" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M604 212V384" stroke="#F4C46A" stroke-width="6" stroke-linecap="round"/>
+      <text x="104" y="472" fill="#9FD3FF" font-size="22" font-family="Arial, sans-serif">Classroom preview</text>
+    </symbol>
+  </svg>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top">Teaching Daily</a>
@@ -107,30 +187,6 @@
       </div>
     </section>
 
-    <section class="section section-muted">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Platform Highlights</p>
-          <h2>平台亮点</h2>
-          <p class="section-intro">以更专业的线上教育平台式展示方式，突出教学价值、适配场景与资料沉淀能力。</p>
-        </div>
-        <div class="highlight-grid">
-          <article class="card highlight-card">
-            <h3>适用对象</h3>
-            <p>适合高三学生系统复习、教师参考板书组织、以及教学成果展示与专业呈现。</p>
-          </article>
-          <article class="card highlight-card">
-            <h3>资料组织</h3>
-            <p>按教学内容和时间维度归档，便于查阅课堂推进节奏、复习重点与阶段性积累。</p>
-          </article>
-          <article class="card highlight-card">
-            <h3>展示风格</h3>
-            <p>整体表达克制、专业，兼顾招生展示、教学简历延伸页面与个人学术主页导流。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section id="archive" class="section">
       <div class="container">
         <div class="section-heading section-heading-row">
@@ -144,7 +200,7 @@
 
         <div class="board-grid">
           <a class="board-card" href="./2.17日高三数学.pdf">
-            <img src="./assets/board-thumbs/board-01.svg" alt="2.17 日高三数学板书缩略图">
+            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="2.17 日高三数学板书缩略图"><use href="#symBoardA"/></svg>
             <div class="board-card-body">
               <span class="resource-date">2026.02.17</span>
               <strong>2.17 日高三数学</strong>
@@ -152,7 +208,7 @@
             </div>
           </a>
           <a class="board-card" href="./2.23高三数学.pdf">
-            <img src="./assets/board-thumbs/board-02.svg" alt="2.23 高三数学板书缩略图">
+            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="2.23 高三数学板书缩略图"><use href="#symBoardB"/></svg>
             <div class="board-card-body">
               <span class="resource-date">2026.02.23</span>
               <strong>2.23 高三数学</strong>
@@ -160,7 +216,7 @@
             </div>
           </a>
           <a class="board-card" href="./3.1高三数学.pdf">
-            <img src="./assets/board-thumbs/board-03.svg" alt="3.1 高三数学板书缩略图">
+            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.1 高三数学板书缩略图"><use href="#symBoardC"/></svg>
             <div class="board-card-body">
               <span class="resource-date">2026.03.01</span>
               <strong>3.1 高三数学</strong>
@@ -168,7 +224,7 @@
             </div>
           </a>
           <a class="board-card" href="./3.8高三数学.pdf">
-            <img src="./assets/board-thumbs/board-04.svg" alt="3.8 高三数学板书缩略图">
+            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.8 高三数学板书缩略图"><use href="#symBoardD"/></svg>
             <div class="board-card-body">
               <span class="resource-date">2026.03.08</span>
               <strong>3.8 高三数学</strong>
@@ -176,7 +232,7 @@
             </div>
           </a>
           <a class="board-card" href="./3.15高三数学.pdf">
-            <img src="./assets/board-thumbs/board-01.svg" alt="3.15 高三数学板书缩略图">
+            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.15 高三数学板书缩略图"><use href="#symBoardA"/></svg>
             <div class="board-card-body">
               <span class="resource-date">2026.03.15</span>
               <strong>3.15 高三数学</strong>
@@ -184,7 +240,7 @@
             </div>
           </a>
           <a class="board-card" href="./3.22高三数学.pdf">
-            <img src="./assets/board-thumbs/board-02.svg" alt="3.22 高三数学板书缩略图">
+            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.22 高三数学板书缩略图"><use href="#symBoardB"/></svg>
             <div class="board-card-body">
               <span class="resource-date">2026.03.22</span>
               <strong>3.22 高三数学</strong>
@@ -192,7 +248,7 @@
             </div>
           </a>
           <a class="board-card" href="./3.29高三数学.pdf">
-            <img src="./assets/board-thumbs/board-03.svg" alt="3.29 高三数学板书缩略图">
+            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.29 高三数学板书缩略图"><use href="#symBoardC"/></svg>
             <div class="board-card-body">
               <span class="resource-date">2026.03.29</span>
               <strong>3.29 高三数学</strong>
@@ -200,7 +256,7 @@
             </div>
           </a>
           <a class="board-card" href="./4.4高三数学(1).pdf">
-            <img src="./assets/board-thumbs/board-04.svg" alt="4.4 高三数学板书缩略图">
+            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="4.4 高三数学板书缩略图"><use href="#symBoardD"/></svg>
             <div class="board-card-body">
               <span class="resource-date">2026.04.04</span>
               <strong>4.4 高三数学</strong>
@@ -208,7 +264,7 @@
             </div>
           </a>
           <a class="board-card" href="./4.6高三数学(1).pdf">
-            <img src="./assets/board-thumbs/board-01.svg" alt="4.6 高三数学板书缩略图">
+            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="4.6 高三数学板书缩略图"><use href="#symBoardA"/></svg>
             <div class="board-card-body">
               <span class="resource-date">2026.04.06</span>
               <strong>4.6 高三数学</strong>
@@ -216,7 +272,7 @@
             </div>
           </a>
           <a class="board-card" href="./4.12高三数学.pdf">
-            <img src="./assets/board-thumbs/board-02.svg" alt="4.12 高三数学板书缩略图">
+            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="4.12 高三数学板书缩略图"><use href="#symBoardB"/></svg>
             <div class="board-card-body">
               <span class="resource-date">2026.04.12</span>
               <strong>4.12 高三数学</strong>
