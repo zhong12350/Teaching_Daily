@@ -1,0 +1,22 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" rx="40" fill="#091524"/>
+  <rect x="24" y="24" width="752" height="552" rx="30" fill="url(#bg)"/>
+  <rect x="70" y="84" width="660" height="432" rx="24" fill="#0F2940" stroke="#40698D" stroke-width="4"/>
+  <text x="104" y="146" fill="#A6DAFF" font-size="34" font-family="Arial, sans-serif" font-weight="700">Exam-Oriented Lesson</text>
+  <text x="104" y="188" fill="#F3FBFF" font-size="24" font-family="Arial, sans-serif">ËSàUzôÏ</text>
+  <path d="M116 244H308" stroke="#F3FBFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M116 286H456" stroke="#9FD3FF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M116 328H412" stroke="#F3FBFF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M116 370H346" stroke="#9EE8C3" stroke-width="6" stroke-linecap="round"/>
+  <path d="M518 250L604 212L690 260L612 306L518 250Z" stroke="#F4C46A" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M604 212V384" stroke="#F4C46A" stroke-width="6" stroke-linecap="round"/>
+  <path d="M518 250V420L612 466V306" stroke="#A6DAFF" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M690 260V416L612 466" stroke="#A6DAFF" stroke-width="6" stroke-linejoin="round"/>
+  <text x="104" y="472" fill="#9FD3FF" font-size="22" font-family="Arial, sans-serif">Classroom Preview</text>
+  <defs>
+    <linearGradient id="bg" x1="24" y1="24" x2="776" y2="576" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10263A"/>
+      <stop offset="1" stop-color="#08131F"/>
+    </linearGradient>
+  </defs>
+</svg>

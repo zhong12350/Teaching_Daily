@@ -1,0 +1,23 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" rx="40" fill="#0D1B2A"/>
+  <rect x="24" y="24" width="752" height="552" rx="28" fill="url(#bg)"/>
+  <rect x="70" y="86" width="660" height="428" rx="24" fill="#17324A" stroke="#355B7A" stroke-width="4"/>
+  <text x="102" y="146" fill="#B6E3FF" font-size="34" font-family="Arial, sans-serif" font-weight="700">Teaching Daily</text>
+  <text x="102" y="188" fill="#E9F7FF" font-size="24" font-family="Arial, sans-serif">ýpüp˜f</text>
+  <path d="M112 250H336" stroke="#F3FBFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M112 292H520" stroke="#9FD3FF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M112 334H472" stroke="#F3FBFF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M112 390C178 330 240 312 298 332C350 350 402 404 468 418" stroke="#F8C66A" stroke-width="7" stroke-linecap="round"/>
+  <path d="M504 250H676" stroke="#A4F0C5" stroke-width="6" stroke-linecap="round"/>
+  <path d="M504 286H654" stroke="#E9F7FF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M504 322H688" stroke="#A4F0C5" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="616" cy="404" r="74" stroke="#B6E3FF" stroke-width="6"/>
+  <path d="M562 434C574 388 600 362 648 354" stroke="#F8C66A" stroke-width="6" stroke-linecap="round"/>
+  <text x="102" y="474" fill="#9FD3FF" font-size="22" font-family="Arial, sans-serif">Board Preview</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10243A"/>
+      <stop offset="1" stop-color="#0A1726"/>
+    </linearGradient>
+  </defs>
+</svg>
