@@ -97,6 +97,7 @@
       <nav class="site-nav" aria-label="主导航">
         <a href="#features">教学特点</a>
         <a href="#archive">资料归档</a>
+        <a href="#ai-board-summary">AI 总结</a>
         <a href="#profile">作者背景</a>
         <a href="#future">未来计划</a>
         <a href="https://zhong12350.github.io" target="_blank" rel="noreferrer">个人主页</a>
@@ -193,92 +194,152 @@
           <div>
             <p class="section-kicker">Materials Archive</p>
             <h2>教学资料归档</h2>
-            <p class="section-intro">课堂板书采用缩略图展示，浏览体验更接近线上教育资源平台。</p>
+            <p class="section-intro">课堂板书采用缩略图展示。点击下方「DeepSeek 总结」可一键复制提示词与本讲 PDF 的公开链接，并打开 DeepSeek 网页版粘贴使用（适合 iPad 手写导出 PDF）。</p>
           </div>
           <a class="text-link" href="./boards/README.md">查看板书索引</a>
         </div>
 
+        <div id="ai-board-summary" class="card ai-summary-notice">
+          <h3 class="ai-summary-title">AI 辅助总结（DeepSeek）</h3>
+          <p class="ai-summary-text">
+            本站为静态页面，无法在站内直接完成大模型对话。请选择对应日期的板书，点击「DeepSeek 总结」：
+            系统会<strong>自动复制</strong>一段面向高三数学板书总结的提示词，并附上当前站点上该 PDF 的<strong>可访问链接</strong>，随后在新标签页打开
+            <a href="https://chat.deepseek.com/" target="_blank" rel="noreferrer">DeepSeek 对话</a>，将剪贴板内容粘贴发送即可。
+            若模型无法抓取链接，请在浏览器中先打开 PDF，将文件或分页截图上传至 DeepSeek。
+          </p>
+        </div>
+
         <div class="board-grid">
-          <a class="board-card" href="./2.17日高三数学.pdf">
-            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="2.17 日高三数学板书缩略图"><use href="#symBoardA"/></svg>
-            <div class="board-card-body">
-              <span class="resource-date">2026.02.17</span>
-              <strong>2.17 日高三数学</strong>
-              <p>课堂板书归档</p>
+          <article class="board-card">
+            <a class="board-card-main" href="./2.17日高三数学.pdf">
+              <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="2.17 日高三数学板书缩略图"><use href="#symBoardA"/></svg>
+              <div class="board-card-body">
+                <span class="resource-date">2026.02.17</span>
+                <strong>2.17 日高三数学</strong>
+                <p>课堂板书归档</p>
+              </div>
+            </a>
+            <div class="board-card-actions">
+              <button type="button" class="btn-deepseek" data-pdf="./2.17日高三数学.pdf" data-title="2.17 日高三数学板书">DeepSeek 总结</button>
             </div>
-          </a>
-          <a class="board-card" href="./2.23高三数学.pdf">
-            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="2.23 高三数学板书缩略图"><use href="#symBoardB"/></svg>
-            <div class="board-card-body">
-              <span class="resource-date">2026.02.23</span>
-              <strong>2.23 高三数学</strong>
-              <p>课堂板书归档</p>
+          </article>
+          <article class="board-card">
+            <a class="board-card-main" href="./2.23高三数学.pdf">
+              <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="2.23 高三数学板书缩略图"><use href="#symBoardB"/></svg>
+              <div class="board-card-body">
+                <span class="resource-date">2026.02.23</span>
+                <strong>2.23 高三数学</strong>
+                <p>课堂板书归档</p>
+              </div>
+            </a>
+            <div class="board-card-actions">
+              <button type="button" class="btn-deepseek" data-pdf="./2.23高三数学.pdf" data-title="2.23 高三数学板书">DeepSeek 总结</button>
             </div>
-          </a>
-          <a class="board-card" href="./3.1高三数学.pdf">
-            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.1 高三数学板书缩略图"><use href="#symBoardC"/></svg>
-            <div class="board-card-body">
-              <span class="resource-date">2026.03.01</span>
-              <strong>3.1 高三数学</strong>
-              <p>课堂板书归档</p>
+          </article>
+          <article class="board-card">
+            <a class="board-card-main" href="./3.1高三数学.pdf">
+              <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.1 高三数学板书缩略图"><use href="#symBoardC"/></svg>
+              <div class="board-card-body">
+                <span class="resource-date">2026.03.01</span>
+                <strong>3.1 高三数学</strong>
+                <p>课堂板书归档</p>
+              </div>
+            </a>
+            <div class="board-card-actions">
+              <button type="button" class="btn-deepseek" data-pdf="./3.1高三数学.pdf" data-title="3.1 高三数学板书">DeepSeek 总结</button>
             </div>
-          </a>
-          <a class="board-card" href="./3.8高三数学.pdf">
-            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.8 高三数学板书缩略图"><use href="#symBoardD"/></svg>
-            <div class="board-card-body">
-              <span class="resource-date">2026.03.08</span>
-              <strong>3.8 高三数学</strong>
-              <p>课堂板书归档</p>
+          </article>
+          <article class="board-card">
+            <a class="board-card-main" href="./3.8高三数学.pdf">
+              <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.8 高三数学板书缩略图"><use href="#symBoardD"/></svg>
+              <div class="board-card-body">
+                <span class="resource-date">2026.03.08</span>
+                <strong>3.8 高三数学</strong>
+                <p>课堂板书归档</p>
+              </div>
+            </a>
+            <div class="board-card-actions">
+              <button type="button" class="btn-deepseek" data-pdf="./3.8高三数学.pdf" data-title="3.8 高三数学板书">DeepSeek 总结</button>
             </div>
-          </a>
-          <a class="board-card" href="./3.15高三数学.pdf">
-            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.15 高三数学板书缩略图"><use href="#symBoardA"/></svg>
-            <div class="board-card-body">
-              <span class="resource-date">2026.03.15</span>
-              <strong>3.15 高三数学</strong>
-              <p>课堂板书归档</p>
+          </article>
+          <article class="board-card">
+            <a class="board-card-main" href="./3.15高三数学.pdf">
+              <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.15 高三数学板书缩略图"><use href="#symBoardA"/></svg>
+              <div class="board-card-body">
+                <span class="resource-date">2026.03.15</span>
+                <strong>3.15 高三数学</strong>
+                <p>课堂板书归档</p>
+              </div>
+            </a>
+            <div class="board-card-actions">
+              <button type="button" class="btn-deepseek" data-pdf="./3.15高三数学.pdf" data-title="3.15 高三数学板书">DeepSeek 总结</button>
             </div>
-          </a>
-          <a class="board-card" href="./3.22高三数学.pdf">
-            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.22 高三数学板书缩略图"><use href="#symBoardB"/></svg>
-            <div class="board-card-body">
-              <span class="resource-date">2026.03.22</span>
-              <strong>3.22 高三数学</strong>
-              <p>课堂板书归档</p>
+          </article>
+          <article class="board-card">
+            <a class="board-card-main" href="./3.22高三数学.pdf">
+              <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.22 高三数学板书缩略图"><use href="#symBoardB"/></svg>
+              <div class="board-card-body">
+                <span class="resource-date">2026.03.22</span>
+                <strong>3.22 高三数学</strong>
+                <p>课堂板书归档</p>
+              </div>
+            </a>
+            <div class="board-card-actions">
+              <button type="button" class="btn-deepseek" data-pdf="./3.22高三数学.pdf" data-title="3.22 高三数学板书">DeepSeek 总结</button>
             </div>
-          </a>
-          <a class="board-card" href="./3.29高三数学.pdf">
-            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.29 高三数学板书缩略图"><use href="#symBoardC"/></svg>
-            <div class="board-card-body">
-              <span class="resource-date">2026.03.29</span>
-              <strong>3.29 高三数学</strong>
-              <p>课堂板书归档</p>
+          </article>
+          <article class="board-card">
+            <a class="board-card-main" href="./3.29高三数学.pdf">
+              <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="3.29 高三数学板书缩略图"><use href="#symBoardC"/></svg>
+              <div class="board-card-body">
+                <span class="resource-date">2026.03.29</span>
+                <strong>3.29 高三数学</strong>
+                <p>课堂板书归档</p>
+              </div>
+            </a>
+            <div class="board-card-actions">
+              <button type="button" class="btn-deepseek" data-pdf="./3.29高三数学.pdf" data-title="3.29 高三数学板书">DeepSeek 总结</button>
             </div>
-          </a>
-          <a class="board-card" href="./4.4高三数学(1).pdf">
-            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="4.4 高三数学板书缩略图"><use href="#symBoardD"/></svg>
-            <div class="board-card-body">
-              <span class="resource-date">2026.04.04</span>
-              <strong>4.4 高三数学</strong>
-              <p>课堂板书归档</p>
+          </article>
+          <article class="board-card">
+            <a class="board-card-main" href="./4.4高三数学(1).pdf">
+              <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="4.4 高三数学板书缩略图"><use href="#symBoardD"/></svg>
+              <div class="board-card-body">
+                <span class="resource-date">2026.04.04</span>
+                <strong>4.4 高三数学</strong>
+                <p>课堂板书归档</p>
+              </div>
+            </a>
+            <div class="board-card-actions">
+              <button type="button" class="btn-deepseek" data-pdf="./4.4高三数学(1).pdf" data-title="4.4 高三数学板书">DeepSeek 总结</button>
             </div>
-          </a>
-          <a class="board-card" href="./4.6高三数学(1).pdf">
-            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="4.6 高三数学板书缩略图"><use href="#symBoardA"/></svg>
-            <div class="board-card-body">
-              <span class="resource-date">2026.04.06</span>
-              <strong>4.6 高三数学</strong>
-              <p>课堂板书归档</p>
+          </article>
+          <article class="board-card">
+            <a class="board-card-main" href="./4.6高三数学(1).pdf">
+              <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="4.6 高三数学板书缩略图"><use href="#symBoardA"/></svg>
+              <div class="board-card-body">
+                <span class="resource-date">2026.04.06</span>
+                <strong>4.6 高三数学</strong>
+                <p>课堂板书归档</p>
+              </div>
+            </a>
+            <div class="board-card-actions">
+              <button type="button" class="btn-deepseek" data-pdf="./4.6高三数学(1).pdf" data-title="4.6 高三数学板书">DeepSeek 总结</button>
             </div>
-          </a>
-          <a class="board-card" href="./4.12高三数学.pdf">
-            <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="4.12 高三数学板书缩略图"><use href="#symBoardB"/></svg>
-            <div class="board-card-body">
-              <span class="resource-date">2026.04.12</span>
-              <strong>4.12 高三数学</strong>
-              <p>课堂板书归档</p>
+          </article>
+          <article class="board-card">
+            <a class="board-card-main" href="./4.12高三数学.pdf">
+              <svg class="board-thumb" viewBox="0 0 800 600" role="img" aria-label="4.12 高三数学板书缩略图"><use href="#symBoardB"/></svg>
+              <div class="board-card-body">
+                <span class="resource-date">2026.04.12</span>
+                <strong>4.12 高三数学</strong>
+                <p>课堂板书归档</p>
+              </div>
+            </a>
+            <div class="board-card-actions">
+              <button type="button" class="btn-deepseek" data-pdf="./4.12高三数学.pdf" data-title="4.12 高三数学板书">DeepSeek 总结</button>
             </div>
-          </a>
+          </article>
         </div>
 
         <div class="archive-block">
@@ -368,5 +429,21 @@
       </div>
     </div>
   </footer>
+
+  <div id="deepseek-fallback" class="modal-overlay" hidden>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="deepseek-modal-title">
+      <h2 id="deepseek-modal-title" class="modal-title">请复制下方内容到 DeepSeek</h2>
+      <p class="modal-hint">当前环境无法自动写入剪贴板时，请手动全选复制，或点击下方「复制」。</p>
+      <textarea id="deepseek-fallback-text" class="modal-textarea" rows="14" readonly></textarea>
+      <div class="modal-actions">
+        <button type="button" class="button button-primary" id="deepseek-fallback-copy">复制全文</button>
+        <a class="button button-secondary-modal" href="https://chat.deepseek.com/" target="_blank" rel="noreferrer" id="deepseek-fallback-open">打开 DeepSeek</a>
+        <button type="button" class="button button-ghost-modal" id="deepseek-fallback-close">关闭</button>
+      </div>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="./assets/deepseek.js" defer></script>
 </body>
 </html>
