@@ -97,7 +97,6 @@
       <nav class="site-nav" aria-label="主导航">
         <a href="#features">教学特点</a>
         <a href="#archive">资料归档</a>
-        <a href="#ai-board-summary">AI 总结</a>
         <a href="#profile">作者背景</a>
         <a href="#future">未来计划</a>
         <a href="https://zhong12350.github.io" target="_blank" rel="noreferrer">个人主页</a>
@@ -194,19 +193,9 @@
           <div>
             <p class="section-kicker">Materials Archive</p>
             <h2>教学资料归档</h2>
-            <p class="section-intro">课堂板书采用缩略图展示。点击下方「DeepSeek 总结」可一键复制提示词与本讲 PDF 的公开链接，并打开 DeepSeek 网页版粘贴使用（适合 iPad 手写导出 PDF）。</p>
+            <p class="section-intro">课堂板书采用缩略图展示，按日期归档。</p>
           </div>
           <a class="text-link" href="./boards/README.md">查看板书索引</a>
-        </div>
-
-        <div id="ai-board-summary" class="card ai-summary-notice">
-          <h3 class="ai-summary-title">AI 辅助总结（DeepSeek）</h3>
-          <p class="ai-summary-text">
-            本站为静态页面，无法在站内直接完成大模型对话。请选择对应日期的板书，点击「DeepSeek 总结」：
-            系统会<strong>自动复制</strong>一段面向高三数学板书总结的提示词，并附上当前站点上该 PDF 的<strong>可访问链接</strong>，随后在新标签页打开
-            <a href="https://chat.deepseek.com/" target="_blank" rel="noreferrer">DeepSeek 对话</a>，将剪贴板内容粘贴发送即可。
-            若模型无法抓取链接，请在浏览器中先打开 PDF，将文件或分页截图上传至 DeepSeek。
-          </p>
         </div>
 
         <div class="board-grid">
@@ -367,7 +356,6 @@
           <div>
             <p class="section-kicker">Professional Profile</p>
             <h2>作者背景</h2>
-            <p class="section-intro">保留核心背景信息，并增加个人主页入口用于进一步了解学习与项目内容。</p>
           </div>
           <a class="button button-ghost" href="https://zhong12350.github.io" target="_blank" rel="noreferrer">查看个人主页</a>
         </div>
@@ -433,7 +421,7 @@
   <div id="deepseek-fallback" class="modal-overlay" hidden>
     <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="deepseek-modal-title">
       <h2 id="deepseek-modal-title" class="modal-title">请复制下方内容到 DeepSeek</h2>
-      <p class="modal-hint">当前环境无法自动写入剪贴板时，请手动全选复制，或点击下方「复制」。</p>
+      <p class="modal-hint">无法自动写入剪贴板时，请手动复制；板书 PDF 需在本页先通过「DeepSeek 总结」触发下载。</p>
       <textarea id="deepseek-fallback-text" class="modal-textarea" rows="14" readonly></textarea>
       <div class="modal-actions">
         <button type="button" class="button button-primary" id="deepseek-fallback-copy">复制全文</button>

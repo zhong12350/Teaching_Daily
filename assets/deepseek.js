@@ -1,16 +1,45 @@
 (function () {
   var DEEPSEEK_CHAT = "https://chat.deepseek.com/";
 
-  function buildPrompt(title, pdfAbsUrl) {
+  function fileNameFromPath(pdfPath) {
+    var s = String(pdfPath).replace(/^\.\//, "");
+    var i = s.lastIndexOf("/");
+    return i >= 0 ? s.slice(i + 1) : s;
+  }
+
+  /** 触发本讲 PDF 下载（同源页面一般可保存为指定文件名） */
+  function triggerDownload(pdfPath) {
+    var name = fileNameFromPath(pdfPath);
+    var abs;
+    try {
+      abs = new URL(pdfPath, window.location.href).href;
+    } catch (e) {
+      abs = pdfPath;
+    }
+    var a = document.createElement("a");
+    a.href = abs;
+    a.setAttribute("download", name);
+    a.rel = "noopener";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    return name;
+  }
+
+  /**
+   * 说明：网页无法把本机文件自动塞进 DeepSeek 的上传框（跨站安全限制）。
+   * 流程为：先下载 PDF → 用户在 DeepSeek 里手动选「刚下载的该文件名」（通常为下载列表第一项）→ 再粘贴提示词。
+   */
+  function buildPrompt(title, fileName) {
     return (
-      "【高三数学课堂板书总结请求】\n" +
-      "请协助我阅读并总结下面这份课堂板书 PDF。板书多为 iPad 手写导出，若个别字迹难以识别，请基于可读部分归纳，并说明不确定之处。\n\n" +
+      "【高三数学课堂板书总结】\n" +
+      "我已在本页触发本讲板书 PDF 的下载。请在 DeepSeek 中点击上传附件，在「下载」文件夹中选择刚保存的文件「" +
+      fileName +
+      "」（一般为当前最近下载的一项）；上传后再将本条消息一并发送。\n\n" +
       "板书名称：" +
       title +
       "\n\n" +
-      "该文件在本站的公开访问链接（请优先尝试；若 DeepSeek 无法直接读取链接内容，请你在本机浏览器打开该链接查看 PDF，再将 PDF 上传或分页截图发给我）：\n" +
-      pdfAbsUrl +
-      "\n\n" +
+      "请协助总结该 PDF。板书多为 iPad 手写导出，若个别字迹难以识别，请基于可读部分归纳，并说明不确定之处。\n\n" +
       "请按以下结构输出：\n" +
       "1）本讲涉及的主要知识点与题型；\n" +
       "2）关键步骤、板书层次与书写要点；\n" +
@@ -88,35 +117,35 @@
     }
   }
 
-  function handleDeepseekClick(btn) {
-    var pdf = btn.getAttribute("data-pdf");
+  function runAfterDownload(btn, fileName) {
     var title = btn.getAttribute("data-title") || "课堂板书";
-    if (!pdf) return;
+    var text = buildPrompt(title, fileName);
 
-    var absUrl;
-    try {
-      absUrl = new URL(pdf, window.location.href).href;
-    } catch (e) {
-      absUrl = pdf;
+    function finish() {
+      openDeepseekTab();
+      showToast("已复制提示词并打开 DeepSeek；请先上传刚下载的「" + fileName + "」，再在输入框粘贴发送。");
     }
 
-    var text = buildPrompt(title, absUrl);
-
     copyText(text)
-      .then(function () {
-        openDeepseekTab();
-        showToast("已复制提示词与 PDF 链接，请在新标签页的 DeepSeek 输入框中粘贴发送。");
-      })
+      .then(finish)
       .catch(function () {
         fallbackCopy(text)
-          .then(function () {
-            openDeepseekTab();
-            showToast("已复制（兼容模式），请在新标签页 DeepSeek 中粘贴。");
-          })
+          .then(finish)
           .catch(function () {
             showFallback(text);
           });
       });
+  }
+
+  function handleDeepseekClick(btn) {
+    var pdf = btn.getAttribute("data-pdf");
+    if (!pdf) return;
+
+    var fileName = triggerDownload(pdf);
+
+    window.setTimeout(function () {
+      runAfterDownload(btn, fileName);
+    }, 320);
   }
 
   function init() {

@@ -424,32 +424,6 @@ img {
   transform: translateY(1px);
 }
 
-.ai-summary-notice {
-  margin-bottom: 28px;
-  padding: 22px 26px;
-  border: 1px solid rgba(38, 103, 255, 0.2);
-  background: linear-gradient(180deg, #f8fbff 0%, #f0f5ff 100%);
-}
-
-.ai-summary-title {
-  margin: 0 0 12px;
-  font-size: 1.15rem;
-}
-
-.ai-summary-text {
-  margin: 0;
-  color: var(--text-soft);
-  font-size: 0.98rem;
-  line-height: 1.75;
-}
-
-.ai-summary-text a {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 .modal-overlay {
   position: fixed;
   inset: 0;
