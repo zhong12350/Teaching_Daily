@@ -409,6 +409,78 @@ img {
   font-weight: 600;
 }
 
+.curriculum-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.curriculum-actions .button-ghost {
+  border: 1px solid rgba(38, 103, 255, 0.22);
+  background: rgba(38, 103, 255, 0.07);
+  color: var(--accent-strong);
+}
+
+.curriculum-actions .button-ghost:hover {
+  background: rgba(38, 103, 255, 0.12);
+}
+
+.curriculum-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.curriculum-grid a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--text);
+  font-weight: 600;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.curriculum-grid a:hover {
+  border-color: rgba(38, 103, 255, 0.35);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+  color: var(--accent-strong);
+}
+
+.curriculum-grid span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.curriculum-footnote {
+  margin: 26px 0 0;
+  font-size: 0.94rem;
+  color: var(--text-soft);
+  line-height: 1.65;
+}
+
+.curriculum-footnote code {
+  font-size: 0.88em;
+}
+
 .board-card {
   display: flex;
   flex-direction: column;
@@ -706,7 +778,8 @@ img {
   .archive-title-row,
   .section-heading-row,
   .hero-metrics,
-  .supplements-grid {
+  .supplements-grid,
+  .curriculum-grid {
     display: grid;
     grid-template-columns: 1fr;
   }
