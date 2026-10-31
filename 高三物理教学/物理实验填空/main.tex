@@ -1,0 +1,521 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.45cm,top=1.25cm,bottom=1.3cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setmainfont{Times New Roman}
+\setCJKmainfont{Songti SC}
+\setCJKsansfont{Heiti SC}
+\setCJKmonofont{Heiti SC}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=1.7em,itemsep=0.18em,topsep=0.2em,parsep=0pt}
+\setlist[itemize]{leftmargin=1.35em,itemsep=0.12em,topsep=0.15em,parsep=0pt}
+\usepackage{titlesec}
+\titleformat{\section}{\large\sffamily\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalsize\sffamily\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{0.65em}{0.22em}
+\titlespacing*{\subsection}{0pt}{0.48em}{0.12em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.32em}
+\linespread{1.12}
+\pagestyle{plain}
+\raggedbottom
+\graphicspath{{fig/}}
+\newcommand{\fb}[1][2.8cm]{\underline{\hspace{#1}}}
+\newcommand{\fig}[2]{\includegraphics[height=#1]{#2}}
+\begin{document}
+
+\section{实验一\quad 探究小车匀变速直线运动的规律}
+
+\subsection{一、打点计时器}
+
+1. 作用：计时仪器。所用交流电源的频率为 $f$ 时，每隔一个打点周期打一次点。
+
+写出打点周期与频率的关系；若 $f=50\,\mathrm{Hz}$，再求出周期。
+
+$T=\fb[2.4cm]$；当 $f=50\,\mathrm{Hz}$ 时，$T=\fb[2.2cm]$。
+
+2. 结构：
+
+\vspace{0.25em}
+\noindent\begin{minipage}[c]{0.48\textwidth}\centering\fig{3.15cm}{p1_em}\end{minipage}\hfill
+\begin{minipage}[c]{0.48\textwidth}\centering\fig{3.15cm}{p1_spark}\end{minipage}
+
+\subsection{二、实验}
+
+\vspace{0.2em}
+\noindent\begin{minipage}[c]{0.46\textwidth}\centering\fig{2.55cm}{p1_cart}\end{minipage}\hfill
+\begin{minipage}[c]{0.50\textwidth}\centering\fig{1.55cm}{p1_tape}\end{minipage}
+
+【注】
+\begin{enumerate}
+\item 把小车停在靠近打点计时器处，先接通电源，后放开小车；
+\item 小车运动一段时间后，断开电源，取下纸带；
+\item 细绳、纸带与长木板平行；
+\item 在到达长木板末端前让小车停止运动，防止砝码落地及小车与滑轮相撞；
+\item 更换纸带重复实验三次，选择一条比较理想的纸带进行测量、分析；
+\item 不需要平衡摩擦力；
+\item 不需要满足悬挂砝码质量远小于小车质量。
+\end{enumerate}
+
+\subsection{三、数据处理}
+
+\begin{center}\fig{1.7cm}{p2_tape}\end{center}
+
+1. 由纸带计算某点的瞬时速度。匀变速直线运动中，中间时刻的瞬时速度等于这段时间的平均速度。
+
+上图纸带中，点 1 两侧的位移是 $s_1$、$s_2$，点 2 两侧是 $s_2$、$s_3$，每段时间为 $T$。该点速度等于这两段位移之和除以 $2T$：
+
+$v_1=\fb[3.4cm]$，\quad $v_2=\fb[3.4cm]$。
+
+2. 利用纸带求物体的加速度（逐差法）。设相邻计数点的时间间隔为 $T$。后一段（或后几段之和）减去前一段（或前几段之和），再除以对应的时间因子。
+
+\begin{enumerate}
+\item 连续 6 段 $s_1$ 至 $s_6$：后三段之和减去前三段之和，分母为 $9T^2$。
+
+$a=\fb[6.2cm]$
+\item 只有 5 段时，舍去中间的 $s_3$，改用 $(s_4+s_5)$ 与 $(s_1+s_2)$，分母为 $6T^2$。
+
+$a=\fb[5.6cm]$
+\item 连续 4 段 $s_1$ 至 $s_4$：用 $(s_3+s_4)$ 与 $(s_1+s_2)$，分母为 $4T^2$。
+
+$a=\fb[5.6cm]$
+\end{enumerate}
+
+【变式】下图中 $d_6$ 是 $A$ 到 $G$ 的位移，$d_3$ 是 $A$ 到 $D$ 的位移。它和上面 6 段逐差是同一个加速度，分母仍是 $9T^2$。
+
+\noindent\begin{minipage}[c]{0.46\textwidth}\centering\fig{2.5cm}{p2_var}\end{minipage}\hfill
+\begin{minipage}[c]{0.50\textwidth}
+$a=\fb[4.2cm]$
+\end{minipage}
+
+【补充】计时点和计数点
+\begin{enumerate}
+\item 计时点：打点计时器实际打下的点。交流电 $50\,\mathrm{Hz}$ 时，相邻计时点的间隔就是打点周期，$t=\fb[2.2cm]$（填数值）。
+\item 计数点：纸带上人为选取的点。若两计数点之间有 $n$ 个计时点没画上，间隔是打点周期的 $(n+1)$ 倍，$t=\fb[2.6cm]$。
+\end{enumerate}
+
+\subsection{四、误差分析}
+\begin{enumerate}
+\item 纸带运动时摩擦力不均匀，打点不稳定引起误差。
+\item 计数点间距离的测量有偶然误差。
+\end{enumerate}
+减小误差：小车的加速度应适当大些，以减小长度测量的相对误差；加速度大小以能在约 $50\,\mathrm{cm}$ 的纸带上清楚地取出 6、7 个计数点为宜。
+
+若交变电源频率实际为 $49\,\mathrm{Hz}$，计算时仍按 $50\,\mathrm{Hz}$ 把周期当成 $0.02\,\mathrm{s}$。真实周期比 $0.02\,\mathrm{s}$ 大，而加速度公式的分母里是 $T^2$。所用周期偏\fb[1.15cm]（大/小），测得的加速度偏\fb[1.15cm]（大/小）。
+
+\subsection{实验创新}
+
+\textbf{一、光电门}
+
+\noindent\begin{minipage}[c]{0.42\textwidth}\centering\fig{2.25cm}{p3_gate}\end{minipage}\hfill
+\begin{minipage}[c]{0.55\textwidth}
+遮光条宽度为 $d$，遮光时间为 $t$。速度等于宽度除以遮光时间：$v=\fb[2.2cm]$。
+\end{minipage}
+
+两光电门间距为 $L$，遮光时间分别为 $t_1$、$t_2$。先写 $v_1=d/t_1$、$v_2=d/t_2$，再代入 $v_2^2-v_1^2=2aL$，最后只用 $d$、$t_1$、$t_2$、$L$ 表示：
+
+$a=\fb[6.6cm]$。
+
+误差分析：$d/t$ 实际是遮光过程的平均速度 $\bar v$。公式 $v^2=2ax$ 里要用的是这段位移中点的瞬时速度 $v_{\text{中}}$。物体在加速，中点的瞬时速度比遮光过程的平均速度大还是小？填 $>$ 或 $<$：$v_{\text{中}}\ \fb[1.3cm]\ \bar v$，因此测得的速度偏\fb[1.15cm]（大/小）。
+
+\textbf{二、频闪照相仪}
+
+\noindent\begin{minipage}[c]{0.40\textwidth}\centering\fig{2.7cm}{p3_strobe}\end{minipage}\hfill
+\begin{minipage}[c]{0.57\textwidth}
+频闪周期与打点周期类似，每隔时间 $T$ 拍摄一张照片。左图是连续四段位移 $s_1$ 至 $s_4$，算法与纸带四段逐差相同，分母为 $4T^2$：
+
+$a=\fb[5.2cm]$
+\end{minipage}
+
+\textbf{三、滴水法}
+
+\noindent\begin{minipage}[c]{0.48\textwidth}\centering\fig{2.85cm}{p3_drip}\end{minipage}\hfill
+\begin{minipage}[c]{0.49\textwidth}
+滴水计时与打点计时器类似，每隔时间 $T$ 滴下一滴。左图中 $s_3$ 是起点到第 3 点的位移，$s_6$ 是起点到第 6 点的位移，与上面变式里的 $d_3$、$d_6$ 是同一种算法，分母为 $9T^2$：
+
+$a=\fb[4.2cm]$
+\end{minipage}
+
+\textbf{四、光栅板 $+$ 光电传感器}
+
+\noindent\begin{minipage}[c]{0.34\textwidth}\centering\fig{3.3cm}{p3_grating}\end{minipage}\hfill
+\begin{minipage}[c]{0.63\textwidth}
+遮光带宽度为 $d$，两次遮光时间分别为 $\Delta t_1$、$\Delta t_2$。平均速度等于宽度除以遮光时间：$\bar v=\fb[2cm]$（用 $d$、$\Delta t$）。
+
+第一次、第二次的速度：$v_1=\fb[2.1cm]$（用 $d$、$\Delta t_1$），$v_2=\fb[2.1cm]$（用 $d$、$\Delta t_2$）。
+
+两速度中点之间的时间间隔是 $(\Delta t_1+\Delta t_2)/2$。$g$ 等于 $(v_2-v_1)$ 除以这个间隔；再把 $v_1$、$v_2$ 代入，只用 $d$、$\Delta t_1$、$\Delta t_2$ 表示：
+
+$g=\fb[6.2cm]$
+\end{minipage}
+
+\section{实验二\quad 探究弹簧弹力与形变量的关系}
+
+\subsection{一、实验操作}
+
+\noindent\begin{minipage}[c]{0.28\textwidth}\centering\fig{3.4cm}{p4_spring}\end{minipage}\hfill
+\begin{minipage}[c]{0.69\textwidth}
+\begin{enumerate}
+\item 让弹簧自然下垂，用刻度尺测出弹簧自然伸长时的长度 $l_0$，即原长。
+\item 在弹簧下端挂质量为 $m$ 的钩码，测出此时弹簧的长度 $l$，记录 $m$ 和 $l$。伸长量等于挂钩码后的长度减去原长：$x=\fb[2.4cm]$（用 $l$、$l_0$）。
+\item 改变所挂钩码的质量，多次实验。
+\end{enumerate}
+\end{minipage}
+
+\subsection{二、数据处理}
+\begin{enumerate}
+\item 描点法作图：用平滑的曲线（包括直线）连接各点，得出弹力 $F$ 随弹簧伸长量 $x$ 变化的图线。
+\item 以弹簧的伸长量为自变量，写出图线所代表的函数表达式。
+\end{enumerate}
+平衡时弹力等于钩码重力，又等于 $k$ 乘伸长量。用 $F$、$m$、$g$、$k$、$x$ 写成一个连等式：\quad $\fb[4.6cm]$。
+
+\subsection{三、注意事项}
+\begin{enumerate}
+\item 不要超过弹簧的弹性限度：弹簧下端挂的钩码不要太多，以免弹簧被过度拉伸。
+\item 尽量多测几组数据：要使用轻质弹簧，并且尽量多测几组数据。
+\end{enumerate}
+
+\noindent\begin{minipage}[c]{0.38\textwidth}\centering\fig{3.5cm}{p4_graph}\end{minipage}\hfill
+\begin{minipage}[c]{0.58\textwidth}
+【补充】若 $F$--$x$ 图像不过原点，是由于弹簧自身重力的影响，实验中弹簧不加外力时就已经有形变量。
+\end{minipage}
+
+【作图处理数据的规则】
+\begin{enumerate}
+\item 要在坐标轴上标明物理量的符号和单位，恰当地选取纵轴、横轴的标度，并根据数据特点正确确定坐标起点，使所作图像尽可能占满坐标纸。若弹簧原长较长，横坐标的起点可以不从零开始。
+\item 作图线时，尽可能使直线通过较多的点；不在直线上的点也要尽可能均匀分布在直线两侧。若有个别点偏离太远，是偶然误差太大所致，应舍去。
+\item 注意坐标轴所代表的物理量，并分析图像斜率、截距的意义。
+\end{enumerate}
+
+\subsection{实验创新}
+
+\textbf{一、弹簧水平放置}（避免弹簧自身重力对实验的影响）
+
+\vspace{0.2em}
+\noindent\begin{minipage}[c]{0.42\textwidth}\centering\fig{2.15cm}{p5_horiz}\end{minipage}\hfill
+\begin{minipage}[c]{0.28\textwidth}\centering\fig{2.5cm}{p5_nl}\end{minipage}\hfill
+\begin{minipage}[c]{0.26\textwidth}\end{minipage}
+
+所挂钩码个数为 $N$，每个钩码质量为 $m$；弹簧原长为 $L_0$，挂钩码后长度为 $L$。
+
+拉力等于 $N$ 个钩码的重力，也等于 $k$ 乘伸长量 $(L-L_0)$：
+
+$F=\fb[4.8cm]$
+
+把上式整理成 $N=$（斜率）$\times L+$（截距）：
+
+$N=\fb[5.6cm]$
+
+$N$--$L$ 图像的斜率等于\fb[2.6cm]（用 $k$、$m$、$g$），纵截距等于\fb[3.2cm]（用 $k$、$L_0$、$m$、$g$，为负值）。
+
+\textbf{二、逐差法计算弹簧压缩量}
+
+\noindent\begin{minipage}[c]{0.40\textwidth}\centering\fig{3.15cm}{p5_tube}\end{minipage}\hfill
+\begin{minipage}[c]{0.57\textwidth}
+管内钢球个数为 $n$，共 6 个，弹簧上端对应的刻度尺示数为 $L$，斜面倾角为 $\theta$。
+
+每增加 3 个钢球，压缩量用两个刻度相减：$\Delta L=L_{n+3}-L_n$，即 $\Delta L=\fb[3.2cm]$。
+
+$\Delta L_1$、$\Delta L_2$、$\Delta L_3$ 三次取平均：$\overline{\Delta L}=\fb[4.6cm]$。
+
+沿斜面方向，这 3 个钢球的重力分力与弹力 $k\overline{\Delta L}$ 平衡：
+
+$\fb[4.2cm]$
+
+因此 $k=\fb[3.2cm]$。
+\end{minipage}
+
+\textbf{三、利用智能手机的定位传感器}
+
+\vspace{0.15em}
+\begin{center}\fig{3.5cm}{p5_phone}\end{center}
+
+悬挂钩码个数为 $n$，手机下降的位移为 $x$；手机质量为 $M$，每个钩码质量为 $m$，不挂钩码时弹簧已有的形变量为 $x_0$。
+
+不挂钩码时，手机重力与弹力平衡；$n>0$ 时总重力为 $Mg+nmg$，形变量为 $x+x_0$。
+
+$n=0$ 时，\fb[3.6cm]（用 $M$、$g$、$k$、$x_0$）；\quad $n>0$ 时，\fb[4.8cm]（用 $M$、$n$、$m$、$g$、$k$、$x$、$x_0$）。
+
+两式相减，消去 $M$ 和 $x_0$，得 $n$ 与 $x$ 的关系：\quad $n=\fb[3.4cm]$（用 $k$、$m$、$g$、$x$）。
+
+上图 $N$--$x$ 过原点。读出斜率 $\Delta N/\Delta x$，写成 $\dfrac{k}{mg}=\fb[2.2cm]$（单位是 $\mathrm{cm^{-1}}$）。横轴每 $1\,\mathrm{cm}$ 是 $0.01\,\mathrm{m}$，先把这个斜率改写成 $\mathrm{m^{-1}}$。若 $m=50\,\mathrm{g}$，$g=9.8\,\mathrm{m/s^2}$，则 $k=\fb[2.4cm]$。
+
+上面 $n$ 的式子里还有没有 $M$ 或 $x_0$？手机自重对劲度系数的测量有无影响？\fb[2.2cm]。
+
+\section{实验三\quad 探究两个互成角度的力的合成规律}
+
+\subsection{一、实验操作}
+
+\begin{center}\fig{3.15cm}{p6_setup}\end{center}
+
+\begin{enumerate}
+\item 将橡皮条的一端固定在木板上的 $A$ 点，另一端拴上两根绳套，每根绳套分别连着一个弹簧测力计。
+\item 沿两个方向拉弹簧测力计，把橡皮条的活动端拉到某一位置，将此位置标记为 $O$ 点，并记录两个拉力 $F_1$、$F_2$ 的大小及方向。
+\item 再用一个弹簧测力计把橡皮条的活动端仍拉至 $O$ 点，记录这个拉力的大小及方向。
+\end{enumerate}
+
+\subsection{二、数据处理}
+\begin{enumerate}
+\item 用铅笔和刻度尺从 $O$ 点沿两细绳套的方向画直线，按选定的标度作出 $F_1$、$F_2$ 和 $F$ 的图示。
+\item 以 $F_1$ 和 $F_2$ 为邻边作平行四边形，过 $O$ 点画平行四边形的对角线，此对角线代表的力记为 $F'$。
+\item 比较多次实验中的 $F$ 与 $F'$，在误差允许的范围内是否重合。两个互成角度的力合成时所遵循的规律叫：\fb[3.6cm]。
+\end{enumerate}
+
+\subsection{三、注意事项}
+\begin{enumerate}
+\item 位置不变：同一次实验中，橡皮条活动端的位置一定要相同。
+\item 角度合适：两个弹簧测力计拉橡皮条时，夹角以 $60^\circ$～$120^\circ$ 为宜。
+\item 尽量减小误差：合力不要超出弹簧测力计的量程，并在橡皮条弹性限度内把形变做得尽量大一些；细绳套应适当长一些，便于确定力的方向。
+\item 统一标度：同一次实验中，画力的图示所用标度要相同，并且要恰当选定标度，使力的图示稍大一些。
+\end{enumerate}
+
+【补充】
+\begin{enumerate}
+\item 与 $F_1$、$F_2$ 共同作用等效、方向一定沿 $AO$ 的那个力，记作\fb[1.6cm]（填 $F$ 或 $F'$）。
+\item 用一个力的作用效果代替两个力的共同作用，这种方法叫：\fb[2.8cm]。
+\end{enumerate}
+
+\subsection{实验创新}
+
+\textbf{一、力传感器装置}
+
+\noindent\begin{minipage}[c]{0.42\textwidth}\centering\fig{2.7cm}{p7_sensor}\end{minipage}\hfill
+\begin{minipage}[c]{0.55\textwidth}
+$A$、$B$ 两力传感器的示数分别为 $F_A$、$F_B$，$AO$ 与轻杆的夹角为 $\theta$。结点 $O$ 悬挂重物，重力为 $mg$。
+
+结点 $O$ 平衡。竖直方向：$F_A$ 的竖直分力与重力 $mg$ 平衡。沿杆方向：$F_B$ 与 $F_A$ 的水平分力平衡。
+
+竖直方向：\fb[4.4cm]（用 $F_A$、$\theta$、$m$、$g$）
+
+沿杆方向：\fb[4.4cm]（用 $F_B$、$F_A$、$\theta$）
+\end{minipage}
+
+实验中需多次对传感器调零，是为了消除水平杆自重的影响。让 $A$ 沿圆弧移动，是为了保持结点 $O$ 的位置不变。
+
+\textbf{二、用钩码的重力作为分力和合力}
+
+\vspace{0.15em}
+\noindent\begin{minipage}[c]{0.40\textwidth}\centering\fig{2.9cm}{p7_hooks}\end{minipage}\hfill
+\begin{minipage}[c]{0.42\textwidth}\centering\fig{2.9cm}{p7_vec}\end{minipage}
+
+钩码质量均相等，三段细绳所挂钩码个数分别为 $N_1$、$N_2$、$N_3$。
+
+钩码相同，拉力与个数成正比：$F_1:F_2:F_3=\fb[3.2cm]$（用 $N_1$、$N_2$、$N_3$）。
+
+以 $\vec F_1$、$\vec F_2$ 为邻边作平行四边形时，对角线是 $\vec F_3$。写成矢量式：\fb[3.6cm]。
+
+【注】
+\begin{enumerate}
+\item 实验中三段绳子需与竖直木板平行；
+\item 多次实验中，结点 $O$ 的位置可以不同；
+\item 实验中 $F_3$ 的方向应沿竖直方向。
+\end{enumerate}
+
+\textbf{三、利用钩码重力的变式}
+
+\noindent\begin{minipage}[c]{0.40\textwidth}\centering\fig{2.7cm}{p7_table}\end{minipage}\hfill
+\begin{minipage}[c]{0.36\textwidth}\centering\fig{2.6cm}{p7_top}\end{minipage}
+
+\begin{enumerate}
+\item 记录三根细线所挂钩码的个数；
+\item 记录三根细线的方向；
+\item 多次实验中，结点 $O$ 的位置可以改变。
+\end{enumerate}
+
+若 $F_1$ 的大小和方向都不变，减小 $F_2$ 与 $F_3$ 之间的夹角，则 $F_2$、$F_3$ 的大小\fb[2.6cm]（填“均增大”或“均减小”）。
+
+【注】若桌面不水平，三根细线上的拉力仍等于所挂钩码的重力，不会影响实验结论。
+
+\section{实验四\quad 探究加速度与物体受力、物体质量的关系}
+
+\subsection{一、实验操作}
+
+\noindent\begin{minipage}[c]{0.42\textwidth}\centering\fig{2.85cm}{p8_app}\end{minipage}\hfill
+\begin{minipage}[c]{0.55\textwidth}
+\begin{enumerate}
+\item 用天平测量槽码的质量 $m$ 和小车的质量 $M$。
+\item 补偿阻力：不悬挂槽码，倾斜木板，使小车能匀速下滑。
+\item 小车连接细绳，悬挂槽码，接通电源后放开小车。
+\item 断开电源，取下纸带，计算加速度。
+\end{enumerate}
+\end{minipage}
+
+控制变量：保持小车质量 $M$ 不变，改变槽码质量 $m$，重复实验；保持槽码质量 $m$ 不变，改变小车质量 $M$，重复实验。
+
+\subsection{二、数据处理}
+\begin{enumerate}
+\item 利用逐差法求 $a$。
+\item 以 $a$ 为纵轴、$F$ 为横轴描点、画线。若图线为过原点的直线，说明 $a$ 与 $F$ 成正比。
+\item 以 $a$ 为纵轴、$1/M$ 为横轴描点、画线。若图线为过原点的直线，就能判定 $a$ 与 $M$ 成反比。
+\end{enumerate}
+
+【注】
+
+\textbf{1. 平衡摩擦力}
+
+\noindent\begin{minipage}[c]{0.30\textwidth}\centering\fig{2.15cm}{p8_fric}\end{minipage}\hfill
+\begin{minipage}[c]{0.67\textwidth}
+调节木板倾角，使不悬挂槽码的小车匀速下滑。沿斜面方向，重力的下滑分力与摩擦力平衡：
+
+\fb[5.8cm]（用 $M$、$g$、$\theta$、$\mu$）
+
+因此 $\mu=\fb[2cm]$。
+
+轻推小车使其匀速下滑时，纸带上打下的点迹间距相等。改变小车质量后，无需重新平衡摩擦力。
+\end{minipage}
+
+\textbf{2. 需满足的质量关系}
+
+数据处理时，常把小车所受合力写成 $F=mg$。实际上：
+
+对小车，绳子拉力产生加速度：\fb[3.4cm]（用 $F$、$M$、$a$）。
+
+对槽码，重力减去绳子拉力：\fb[3.8cm]（用 $m$、$g$、$F$、$a$）。
+
+消去 $a$，绳子实际拉力 $F=\fb[4.2cm]$（用 $m$、$M$、$g$）。
+
+要使 $F=mg$，需要\fb[2.8cm]（写出 $M$ 与 $m$ 的关系）。
+
+\textbf{3. 图像分析}
+
+\vspace{0.2em}
+\noindent\begin{minipage}[t]{0.48\textwidth}\centering\fig{2.55cm}{p8_af}\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}\centering\fig{2.7cm}{p8_am}\end{minipage}
+
+左图：保持 $M$ 不变时，理论上 $a$ 与 $F$ 成正比，$a=\fb[2.6cm]$（用 $F$、$M$，过原点）。
+
+\begin{enumerate}
+\item 平衡摩擦力过度，或木板倾角过大：图线在 $a$ 轴上有正截距。
+\item 未满足质量关系 $M\gg m$：图线弯曲。
+\item 未平衡摩擦力，或木板倾角过小：图线在 $F$ 轴正方向上有截距。
+\end{enumerate}
+
+右图：保持 $F$ 不变时，理论上 $a$ 与 $1/M$ 成正比，$a=\fb[2.8cm]$（用 $F$、$M$，过原点）。
+
+\begin{enumerate}
+\item 平衡摩擦力过度（$\mu<\tan\theta$）时，沿斜面的力有拉力、重力分力和摩擦力。动力学方程为（用 $F$、$M$、$g$、$\theta$、$\mu$、$a$）：
+
+$\fb[6.2cm]$
+
+图线与纵轴有交点。
+\item 未满足 $M\gg m$。
+\item 未平衡摩擦力（$\mu>\tan\theta$）时，方程仍是上面这一式，但图线与横轴有交点。
+\end{enumerate}
+
+\subsection{实验创新}
+
+\textbf{一、气垫导轨 $+$ 光电门 $+$ 力传感器}
+
+\noindent\begin{minipage}[c]{0.52\textwidth}\centering\fig{2.2cm}{p9_air}\end{minipage}\hfill
+\begin{minipage}[c]{0.44\textwidth}\centering\fig{1.85cm}{p9_ft}\end{minipage}
+
+气垫导轨不需要平衡摩擦力。拉力传感器可以直接测出绳子拉力，无需满足 $M\gg m$。
+
+遮光条宽度为 $d$，挡光时间为 $t$，小车由静止释放后到达光电门的距离为 $L$。
+
+小车由静止释放，$v=d/t$，且 $v^2=2aL$，所以 $a=\fb[3.6cm]$（用 $d$、$L$、$t$）。
+
+$F=Ma$。把 $a$ 代入，写成 $F$ 正比于 $1/t^2$（右图横轴）：$F=\fb[4.6cm]$。
+
+该图像的斜率 $k=\fb[2.8cm]$（用 $M$、$d$、$L$）。
+
+\textbf{二、弹簧测力计 $+$ 动滑轮}
+
+通过弹簧测力计读出绳子拉力，无需满足 $M\gg m$。小车质量为 $M$，所受摩擦力为 $f$，测力计示数为 $F$。
+
+\noindent\begin{minipage}[c]{0.56\textwidth}\centering\fig{2.45cm}{p9_pulley1}\end{minipage}\hfill
+\begin{minipage}[c]{0.38\textwidth}\centering\fig{2.35cm}{p9_af}\end{minipage}
+
+对小车已有 $2F-f=Ma$。解出 $a$，写成 $a=$（斜率）$\times F+$（截距）：
+
+$a=\fb[4.6cm]$
+
+斜率是 $F$ 前面的系数，所以 $M=\fb[2.2cm]$（用 $k$）。
+
+动滑轮质量 $m_0$ 不能忽略时，整体质量是 $M+m_0$，合力仍是 $2F-f$：
+
+\fb[6.2cm]（用 $F$、$f$、$M$、$m_0$、$a$）
+
+因此 $a=\fb[5.8cm]$。
+
+若撤去弹簧测力计，悬挂重物的质量为 $m$。重物的加速度是小车加速度的 2 倍，拉小车的是两段绳子。
+
+\noindent\begin{minipage}[c]{0.55\textwidth}\centering\fig{2.4cm}{p9_pulley3}\end{minipage}\hfill
+\begin{minipage}[c]{0.32\textwidth}\centering\fig{2.5cm}{p9_inv}\end{minipage}
+
+对重物，加速度为 $2a$：$mg-T=\fb[3.2cm]$（把等号右边写完整）。
+
+对小车，两段绳子的拉力：$2T=\fb[2.6cm]$（用 $M$、$a$）。
+
+消去 $T$，整理成 $\dfrac{1}{a}$ 关于 $\dfrac{1}{m}$ 的一次函数：\quad $\dfrac{1}{a}=\fb[5.6cm]$。
+
+对照 $\dfrac{1}{a}=k\cdot\dfrac{1}{m}+b$，则 $k=\fb[2cm]$，$b=\fb[1.8cm]$，小车质量 $M=\fb[2cm]$（用 $k$、$b$）。
+
+\textbf{三、原理创新}
+
+\noindent\begin{minipage}[c]{0.36\textwidth}
+\centering\fig{2.35cm}{p10_inc}\\[0.35em]
+\fig{2.25cm}{p10_am}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.61\textwidth}
+1. 挂砝码盘时，调节斜面，使小车匀速下滑。小车质量为 $M$，盘和砝码总质量为 $m$，摩擦力为 $f$，斜面倾角为 $\theta$。
+
+匀速时，对小车：重力分力等于拉力加摩擦力（用 $M$、$g$、$\theta$、$T$、$f$）：
+
+\fb[4.4cm]
+
+对盘和砝码：拉力等于总重力，\fb[2.6cm]（用 $T$、$m$、$g$）。
+
+消去 $T$，得\fb[4.4cm]。
+
+2. 取下砝码盘后，小车沿斜面加速下滑。沿斜面只剩重力分力和摩擦力：
+
+\fb[4.6cm]（用 $M$、$g$、$\theta$、$f$、$a$）
+
+与上面匀速的结果比较，得\fb[3.2cm]（$mg$ 与 $Ma$ 的关系）。
+
+因此 $a$ 与 $m$ 成正比，图像斜率 $k=\fb[2cm]$（用 $g$、$M$）。
+\end{minipage}
+
+\textbf{四、实验方法创新}
+
+\noindent\begin{minipage}[c]{0.52\textwidth}\centering\fig{2.15cm}{p10_air}\end{minipage}\hfill
+\begin{minipage}[c]{0.28\textwidth}\centering\fig{2.35cm}{p10_an}\end{minipage}
+
+共 6 个质量均为 $m$ 的砝码，将其中 $n$ 个依次放入轻质托盘，其余仍留在滑块上。滑块质量为 $M$，托盘质量不计。气垫导轨上摩擦力可忽略。
+
+滑块上还留着 $(6-n)$ 个砝码。对滑块：$T=\fb[4.4cm]$（用 $M$、$m$、$n$、$a$）。
+
+对左侧 $n$ 个砝码：$nmg-T=\fb[3.6cm]$（用 $n$、$m$、$a$）。
+
+对整体（滑块加上全部 6 个砝码），外力只有左侧 $n$ 个砝码的重力：$nmg=\fb[3.6cm]$（用 $M$、$m$、$a$）。
+
+因此 $a=\fb[3.8cm]$（与 $n$ 成正比，用 $m$、$g$、$M$、$n$）。
+
+$a$--$n$ 图像的斜率 $k=\fb[3.2cm]$（用 $m$、$g$、$M$）。
+
+两光电门间距为 $L$，遮光条宽度为 $d$，挡光时间分别为 $t_1$、$t_2$。$v=d/t$，再代入 $v_2^2-v_1^2=2aL$：
+
+$a=\fb[5.4cm]$（用 $d$、$t_1$、$t_2$、$L$）。
+
+\textbf{五、竖直平面内的研究}
+
+\noindent\begin{minipage}[c]{0.32\textwidth}\centering\fig{3.5cm}{p10_vert}\end{minipage}\hfill
+\begin{minipage}[c]{0.22\textwidth}\centering\fig{2.3cm}{p10_af}\end{minipage}\hfill
+\begin{minipage}[c]{0.43\textwidth}
+力传感器测得的力与轻绳拉力大小不相等。传感器示数为 $F$，下方物体质量为 $M$，轻绳拉力为 $T$，滑轮轻质。
+
+滑轮轻质，传感器示数等于两段绳的拉力之和：\fb[2.4cm]（用 $F$、$T$）。
+
+对质量为 $M$ 的物体，$T-Mg=Ma$，即\fb[3.4cm]。
+
+消去 $T$，把 $a$ 写成 $F$ 的一次函数：
+
+$a=\fb[3.6cm]$。
+
+右图斜率 $k=\fb[2cm]$（用 $M$），纵截距为\fb[1.8cm]（用 $g$，为负值）。
+\end{minipage}
+
+\end{document}
